@@ -10,8 +10,12 @@ System: Windows 10 64-bit
 ## Python
 Các file:
 
-rs/main.py: Module đánh giá
-rs/evaluation.py Module chứa class Evaluation thực hiện việc chia dữ liệu và đo đạc RMSE
-rs/knn.py: Module chứa class KNN là model k-NN.
-rs/knn_co_training.py: Module chứa class KNNCoTraining là model đồng huấn luyện
-rs/preprocessing.py: Module chứa class Data là class đầu vào cho các model
+- rs/main.py: Module đánh giá
+
+- rs/evaluation.py Module chứa class Evaluation thực hiện việc chia dữ liệu và đo đạc RMSE
+
+- rs/knn.py: Module chứa class KNN là model k-NN.
+
+- rs/knn_co_training.py: Module chứa class KNNCoTraining là model đồng huấn luyện
+
+- rs/preprocessing.py: Module chứa class Data là class đầu vào cho các model
