@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9f43df0-8af8-41dc-bd85-d33031652c85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/matrix_utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/recommender_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/recommender_system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_rs/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_rs/knn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommender_system/data/testing.txt" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/data/testing.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommender_system/data/training.txt" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/data/training.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommender_system/evaluation_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/evaluation_10_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommender_system/evaluation_20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/evaluation_20_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommender_system/evaluation_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/evaluation_5_1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recommender_system/knn/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/knn/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommender_system/knn/knn_co_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/knn/knn_co_training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommender_system/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommender_system/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_knn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utility/evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utility/evaluation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/utility/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility/matrix_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/utility/matrix_utility.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +36,12 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/recommender_system/data" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Python\RecommenderSystem\recommender_system\data" />
       <recent name="E:\Python\RecommenderSystem\utility" />
       <recent name="E:\Python\recommender_system\rs" />
       <recent name="E:\Python\recommender_system\my_rs" />
@@ -69,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.test_knn">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="recommender_system" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,9 +134,6 @@
       <module name="recommender_system" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -156,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.test_knn" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.setup" />
       </list>

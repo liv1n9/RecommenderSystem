@@ -9,6 +9,7 @@ from utility.preprocessing import Data
 f_items = './data/u.item'
 f_users = './data/u.user'
 
+
 class Evaluation:
     def __init__(self, r_data, k_fold=10, keep=10):
         self.r_data = r_data
@@ -78,16 +79,15 @@ class Evaluation:
                 u = int(self.r_tests[fold][x][0])
                 i = int(self.r_tests[fold][x][1])
                 r = float(self.r_tests[fold][x][2])
-                if True:
-                    pred = rs.predict(u, i)
-                    se += (pred - r) ** 2
-                    total += 1
+                pred = rs.predict(u, i)
+                se += abs(pred - r)
+                total += 1
             if total > 0:
-                rmse += np.sqrt(se / total)
+                rmse += se / total
                 t_total += 1
         self.rmse[fold][name] = rmse / t_total
         if co_training:
-            self.pred_percent[fold][name] = rs.total / (rs.data.n_users * rs.data.n_items)
+            self.pred_percent[fold][name] = rs.total / (rs.data.rating.shape[0] * rs.data.rating.shape[1])
         t1 = time.process_time() - t1
         self.predict_time[fold][name] = t1
 
@@ -108,23 +108,28 @@ class Evaluation:
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
-            rs = KNNCoTraining(data, user_knn=False, content_base=False, a0=l1)
-            self.__evaluate(rs, 'Co-training_U-I_' + str(l1), fold)
+            rs = KNN(data, user_knn=False)
+            self.__evaluate(rs, 'Item-KNN', fold)
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
             rs = KNNCoTraining(data, user_knn=False, content_base=False, a0=l1)
-            self.__evaluate(rs, 'Co-training_I-U_' + str(l1), fold)
+            self.__evaluate(rs, 'Co-training_U-I_' + str(l1), fold, co_training=True)
+
+            data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
+            data.process()
+            rs = KNNCoTraining(data, user_knn=True, content_base=False, a0=l1)
+            self.__evaluate(rs, 'Co-training_I-U_' + str(l1), fold, co_training=True)
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
             rs = KNNCoTraining(data, user_knn=False, content_base=True, a0=l1)
-            self.__evaluate(rs, 'Co-training_U-I_Content' + str(l1), fold)
+            self.__evaluate(rs, 'Co-training_U-I_Content' + str(l1), fold, co_training=True)
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
-            rs = KNNCoTraining(data, user_knn=False, content_base=True, a0=l1)
-            self.__evaluate(rs, 'Co-training_I-U_Content' + str(l1), fold)
+            rs = KNNCoTraining(data, user_knn=True, content_base=True, a0=l1)
+            self.__evaluate(rs, 'Co-training_I-U_Content' + str(l1), fold, co_training=True)
 
         for i in range(self.k_fold):
             for name, t in self.training_time[i].items():

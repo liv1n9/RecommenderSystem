@@ -1,0 +1,6 @@
+{'User-KNN': 1.8578125, 'Co-training_U-I_7': 229.5125, 'Co-training_I-U_7': 230.103125, 'Co-training_U-I_Content7': 238.9765625, 'Co-training_I-U_Content7': 238.3234375}
+{'User-KNN': 1.0734375, 'Co-training_U-I_7': 0.421875, 'Co-training_I-U_7': 0.44375, 'Co-training_U-I_Content7': 0.4203125, 'Co-training_I-U_Content7': 0.425}
+{}
+{}
+{'User-KNN': 0.9788153365684453, 'Co-training_U-I_7': 0.9836735333173007, 'Co-training_I-U_7': 0.9836735333173007, 'Co-training_U-I_Content7': 0.9836942615011577, 'Co-training_I-U_Content7': 0.9836942615011577}
+{'User-KNN': 0.00048786801526371295, 'Co-training_U-I_7': 0.0005551677140255583, 'Co-training_I-U_7': 0.0005551677140255583, 'Co-training_U-I_Content7': 0.0006128155047144172, 'Co-training_I-U_Content7': 0.0006128155047144172}

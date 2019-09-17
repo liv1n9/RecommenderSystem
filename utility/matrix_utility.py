@@ -1,5 +1,6 @@
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import MinMaxScaler
 
 
 class MatrixUtility:
@@ -23,12 +24,12 @@ class MatrixUtility:
         x = np.dot(diff, diff.T)
         y = np.sqrt(np.dot(diff ** 2, self.interacted.T if self.interacted is not None else np.ones(self.matrix.T.shape)))
         y = y * y.T
-        self.similarity = x / (y + 1e-8)
+        self.similarity = MinMaxScaler().fit_transform(x / (y + 1e-8))
 
     def __compute_cosine(self):
         self.similarity = cosine_similarity(self.matrix)
 
     def compute(self):
         self.__compute_mean()
-        # self.__compute_pearson()
-        self.__compute_cosine()
+        self.__compute_pearson()
+        # self.__compute_cosine()

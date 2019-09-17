@@ -6,7 +6,7 @@ DTYPE_DOUBLE = np.float64
 
 
 class KNN:
-    def __init__(self, data, user_knn=True, a0=14, c0=0.5, c1=1, d0=10, content_base=False, a1=0.75, b0=0, b1=0.8):
+    def __init__(self, data, user_knn, a0, c0, c1, d0, content_base, a1, b0, b1):
         self.user_knn = user_knn
         if self.user_knn:
             self.rating = data.rating
