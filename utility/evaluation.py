@@ -113,22 +113,22 @@ class Evaluation:
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
-            rs = KNNCoTraining(data, user_knn=False, content_base=False, a0=l1)
+            rs = KNNCoTraining(data, user_knn=True, content_base=False, a0=l1)
             self.__evaluate(rs, 'Co-training_U-I_' + str(l1), fold, co_training=True)
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
-            rs = KNNCoTraining(data, user_knn=True, content_base=False, a0=l1)
+            rs = KNNCoTraining(data, user_knn=False, content_base=False, a0=l1)
             self.__evaluate(rs, 'Co-training_I-U_' + str(l1), fold, co_training=True)
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
-            rs = KNNCoTraining(data, user_knn=False, content_base=True, a0=l1)
+            rs = KNNCoTraining(data, user_knn=True, content_base=True, a0=l1)
             self.__evaluate(rs, 'Co-training_U-I_Content' + str(l1), fold, co_training=True)
 
             data = Data(self.r_trains[fold], self.r_tests[fold], f_items, f_users)
             data.process()
-            rs = KNNCoTraining(data, user_knn=True, content_base=True, a0=l1)
+            rs = KNNCoTraining(data, user_knn=False, content_base=True, a0=l1)
             self.__evaluate(rs, 'Co-training_I-U_Content' + str(l1), fold, co_training=True)
 
         for i in range(self.k_fold):

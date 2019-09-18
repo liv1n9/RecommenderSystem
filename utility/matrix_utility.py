@@ -31,5 +31,5 @@ class MatrixUtility:
 
     def compute(self):
         self.__compute_mean()
-        self.__compute_pearson()
-        # self.__compute_cosine()
+        # self.__compute_pearson()
+        self.__compute_cosine()
